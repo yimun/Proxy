@@ -1,5 +1,5 @@
 function FindProxyForURL(url, host) {
-    var PROXY = "HTTPS 192.168.0.240:8888;DIRECT";
+    var PROXY = "PROXY 192.168.0.240:8888;";
     var DEFAULT = "DIRECT";
 
     var common_list = [
