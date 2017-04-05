@@ -1,5 +1,5 @@
 function FindProxyForURL(url, host) {
-    var PROXY = "PROXY tunnel.douban.com:8118;HTTPS tunnel.douban.com:8443;DIRECT";
+    var PROXY = "HTTPS 192.168.0.240:8888;DIRECT";
     var DEFAULT = "DIRECT";
 
     var common_list = [
@@ -98,11 +98,11 @@ function FindProxyForURL(url, host) {
         "ytimg.com",
     ]
 
-    for(var i=0; i<common_list.length; i++){
-        if(dnsDomainIs(host, common_list[i])){
-            return PROXY;
-        }
-    }
+//     for(var i=0; i<common_list.length; i++){
+//         if(dnsDomainIs(host, common_list[i])){
+//             return PROXY;
+//         }
+//     }
 
-    return DEFAULT;
+    return PROXY;
 }
